@@ -45,7 +45,6 @@
 + (NSInteger) monthWithDate: (NSDate *) date;
 + (NSInteger) yearWithDate: (NSDate *) date;
 + (NSInteger) weekdayWithDate: (NSDate *) date;
-+ (NSString *) monthNameWithMonth: (NSInteger) month;
 + (NSArray *) reverseArray: (NSArray *) nonReversedArr;
 
 + (NSString *) unacent: (NSString *) acented;
