@@ -195,9 +195,9 @@
 }
 
 + (void) fileWrite: (NSDictionary *) dictionary andFileName: (NSString *) fileName {
-    NSArray *paths = kGetPaths;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     if ([paths count] > 0) {
-        NSString *path = kGetFilePath(paths, fileName);
+        NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:fileName];
         [dictionary writeToFile:path atomically:YES];
     }
 }

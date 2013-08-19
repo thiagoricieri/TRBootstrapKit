@@ -13,4 +13,6 @@
 #define kGetFilePath(fp, fn)    [[fp objectAtIndex:0] stringByAppendingPathComponent:fn];
 #define url(theURL) [NSURL URLWithString:theURL]
 
+#define isnull(obj)	(obj == nil || [obj isKindOfClass:[NSNull class]])
+
 #endif
