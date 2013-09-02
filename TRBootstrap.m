@@ -109,6 +109,12 @@
     NSDate *date = [dateFormatter dateFromString:stringDate];
     return date;
 }
++ (NSDate *)dateHourFromString:(NSString *)stringDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat: @"yyyy-MM-d H:m:s"];
+    NSDate *date = [dateFormatter dateFromString:stringDate];
+    return date;
+}
 + (NSDateComponents *)componentsForStringDate: (NSString *) stringDate {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat: @"yyyy-MM-dd"];

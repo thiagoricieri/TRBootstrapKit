@@ -39,6 +39,7 @@
 + (NSDate *)dateForNextMonthWithDate: (NSDate *) currentDate;
 + (NSDate *)dateForPastMonthWithDate: (NSDate *)currentDate;
 + (NSDate *)dateFromString: (NSString *) stringDate;
++ (NSDate *)dateHourFromString: (NSString *) stringDate;
 + (NSDate *)dateFromComponents: (NSDateComponents *) comps;
 + (NSDateComponents *)componentsForStringDate: (NSString *) stringDate;
 + (NSInteger) dayWithDate: (NSDate *) date;

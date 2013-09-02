@@ -28,10 +28,24 @@
 #define bindx(o, xx) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, o.frame.size.width, o.frame.size.height)
 #define bindy(o, yy) CGRectMake(o.frame.origin.x, o.frame.origin.y + o.frame.size.height + yy, o.frame.size.width, o.frame.size.height)
 #define bindxy(o, xx, yy) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y  + o.frame.size.height + yy, o.frame.size.width, o.frame.size.height)
+#define bindxw(o, xx, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, w, o.frame.size.height)
+#define bindxh(o, xx, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, o.frame.size.width, h)
 #define bindxwh(o, xx, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, w, h)
+#define bindyw(o, yy, w) CGRectMake(o.frame.origin.x, o.frame.origin.y + o.frame.size.height + yy, w, o.frame.size.height)
+#define bindyh(o, yy, h) CGRectMake(o.frame.origin.x, o.frame.origin.y + o.frame.size.height + yy, o.frame.size.width, h)
 #define bindywh(o, yy, w, h) CGRectMake(o.frame.origin.x, o.frame.origin.y + o.frame.size.height + yy, w, h)
 #define bindxywh(o, xx, yy, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y  + o.frame.size.height + yy, w, h)
 
+#define xpad(o)	o.frame.origin.x + o.frame.size.width
+#define ypad(o)	o.frame.origin.y + o.frame.size.height
+
+#define x(o)	o.frame.origin.x
+#define y(o)	o.frame.origin.y
+#define width(o)	o.frame.size.width
+#define height(o)	o.frame.size.height
+
 #define degrees2radians(angle) ((angle) / 180.0 * M_PI)
+
+#define val(dict, key)	[dict valueForKey:key]
 
 #endif
