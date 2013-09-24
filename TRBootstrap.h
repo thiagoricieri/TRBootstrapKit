@@ -44,6 +44,8 @@
 + (NSDateComponents *)componentsForStringDate: (NSString *) stringDate;
 + (NSInteger) dayWithDate: (NSDate *) date;
 + (NSInteger) monthWithDate: (NSDate *) date;
++ (NSInteger) hourWithDate: (NSDate *) date;
++ (NSInteger) minutesWithDate: (NSDate *) date;
 + (NSInteger) yearWithDate: (NSDate *) date;
 + (NSInteger) weekdayWithDate: (NSDate *) date;
 + (NSArray *) reverseArray: (NSArray *) nonReversedArr;

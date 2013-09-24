@@ -136,6 +136,16 @@
     NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:date];
     return [components month];
 }
++ (NSInteger) hourWithDate: (NSDate *) date {
+    NSUInteger unitFlags = NSHourCalendarUnit;
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:date];
+    return [components hour];
+}
++ (NSInteger) minutesWithDate:(NSDate *)date {
+    NSUInteger unitFlags = NSMinuteCalendarUnit;
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:date];
+    return [components minute];
+}
 + (NSInteger) yearWithDate: (NSDate *) date{
     NSUInteger unitFlags = NSYearCalendarUnit;
     NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:date];
