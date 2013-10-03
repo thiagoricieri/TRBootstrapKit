@@ -29,6 +29,9 @@
 #define cp_pad(__X__, __Y__) ccp(cx_pad(__X__), cy_pad(__Y__))
 #define cx_pad(__X__) (IS_IPAD ? (__X__) : (IS_IPHONE_5 ? (__X__ * WIDTH_IPHONE_5 / WIDTH_IPAD) : (__X__ * WIDTH_IPHONE_4 / WIDTH_IPAD)))
 #define cy_pad(__Y__) (IS_IPAD ? (__Y__) : (__Y__ * HEIGHT_IPHONE / HEIGHT_IPAD))
+
 #define IPHONE5_PLUSHEIGHT   (IS_IPHONE_5 ? (88) : (0))
+#define IOS7_PLUS_SIZE (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7") ? (64) : (0))
+#define IOS7_STATUSBAR_PAD	(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7") ? (20) : (0))
 
 #endif
