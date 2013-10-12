@@ -44,6 +44,9 @@
 #define width(o)	o.frame.size.width
 #define height(o)	o.frame.size.height
 
+#define xw(o)	o.frame.origin.x + o.frame.size.width
+#define yh(o)	o.frame.origin.y + o.frame.size.height
+
 #define degrees2radians(angle) ((angle) / 180.0 * M_PI)
 
 #define val(dict, key)	[dict valueForKey:key]
