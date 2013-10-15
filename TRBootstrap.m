@@ -91,7 +91,7 @@
     return [calendar dateFromComponents:components];
 }
 + (NSDate *)dateForPastMonthWithDate: (NSDate *)currentDate {
-    int day = [TRBootstrap dayWithDate:currentDate];
+    NSInteger day = [TRBootstrap dayWithDate:currentDate];
     NSDate *monthAgo = [currentDate dateByAddingTimeInterval:-1*24*60*60*(day + 1)];
     return monthAgo;
 }
