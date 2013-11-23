@@ -20,6 +20,13 @@
 #define preto       [UIColor blackColor]
 #define transparent [UIColor clearColor]
 
+#define changeX(o, xx)	o.frame = frame(xx, o.frame.origin.y, o.frame.size.width, o.frame.size.height);
+#define changeY(o, yy)	o.frame = frame(o.frame.origin.x, yy, o.frame.size.width, o.frame.size.height);
+#define changeXY(o, xx, yy)	o.frame = frame(xx, yy, o.frame.size.width, o.frame.size.height);
+#define changeWidth(o, ww)	o.frame = frame(o.frame.origin.x, o.frame.origin.y, ww, o.frame.size.height);
+#define changeHeight(o, hh)	o.frame = frame(o.frame.origin.x, o.frame.origin.y, o.frame.size.width, hh);
+#define changeWidthHeight(o, ww, hh)	o.frame = frame(o.frame.origin.x, o.frame.origin.y, ww, hh);
+
 #define frame(x, y, w, h) CGRectMake(x, y, w, h)
 #define allframe    CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
 #define allframenav CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 44)
@@ -28,7 +35,7 @@
 #define bindx(o, xx) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, o.frame.size.width, o.frame.size.height)
 #define bindy(o, yy) CGRectMake(o.frame.origin.x, o.frame.origin.y + o.frame.size.height + yy, o.frame.size.width, o.frame.size.height)
 #define bindxy(o, xx, yy) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y  + o.frame.size.height + yy, o.frame.size.width, o.frame.size.height)
-#define bindxw(o, xx, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, w, o.frame.size.height)
+#define bindxw(o, xx, w) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, w, o.frame.size.height)
 #define bindxh(o, xx, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, o.frame.size.width, h)
 #define bindxwh(o, xx, w, h) CGRectMake(o.frame.origin.x + o.frame.size.width + xx, o.frame.origin.y, w, h)
 #define bindyw(o, yy, w) CGRectMake(o.frame.origin.x, o.frame.origin.y + o.frame.size.height + yy, w, o.frame.size.height)
